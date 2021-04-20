@@ -446,12 +446,14 @@ font:
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family: HPingFang SC
+    family: Aria #HPingFang SC
+    size: 0.8
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
     family: Roboto Mono # Consolas
+    size: 0.8
 
 
 # ---------------------------------------------------------------
