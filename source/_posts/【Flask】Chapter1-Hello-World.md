@@ -64,15 +64,40 @@ $ python3 -m venv venv
 
 命令执行完，在你的目录下将会有一个名为 venv 的目录用来存储虚拟环境相关文件。
 
+不管用什么方式创建了虚拟环境，你应该已经创建了虚拟环境。现在你需要告诉系统你想使用用虚拟环境，然后激活它。要激活全新的虚拟环境你需要使用下面的命令：
 
+```shell
+$ source venv/bin/activate
+(venv) $_
+```
 
+如果你使用的是Windows的命令提示符窗口，激活命令略有不同：
 
+```shell
+$ venv\Script\activate
+(venv) $_
+```
 
+当你激活虚拟环境，终端会话的配置环境会被修改，之后你键入 `Python` 的时候，实际上是调用的虚拟环境中的 Python 解释器。此外，终端提示符也被修改成包含被激活的虚拟环境的名称的格式。这种对终端对话框的改变是临时的私有的，因此当你关闭终端窗口它们不会保留。如果你同时打开多个终端窗口，在每个窗口激活不同的虚拟环境是非常合适的。
 
+现在你已经创建并激活虚拟环境，你可以通过这个来安装 Flask:
 
+```shell
+(venv)$ pip install flask
+```
 
+如果你想验证虚拟环境中是否成功安装了 Flask，你可以开启 Python 解释器并导入 Flask:
 
+```shell
+>>> import flask
+>>> _
+```
 
+如果没有提示任何错误那么恭喜你，Flask 已经被成功安装并准备好被使用了。
+
+#### A "Hello, World" Flask Application
+
+如果你去 [Flask website](https://flask.palletsprojects.com/en/1.1.x/), 你会得到一个非常简单的示例程序，仅仅只有五行代码。
 
 
 
