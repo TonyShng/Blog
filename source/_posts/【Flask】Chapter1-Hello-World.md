@@ -97,7 +97,25 @@ $ venv\Script\activate
 
 #### A "Hello, World" Flask Application
 
-如果你去 [Flask website](https://flask.palletsprojects.com/en/1.1.x/), 你会得到一个非常简单的示例程序，仅仅只有五行代码。
+如果你去 [Flask website](https://flask.palletsprojects.com/en/1.1.x/), 你会得到一个非常简单的示例程序，仅仅只有五行代码。我将会想你展示稍微复杂的示例，它将为你编写更大的应用程序提供一个良好的基础结构，而不是重复那个简单的示例。
+
+应用程序是存在于包中的。在 Python 中，包含 `__init__.py` 文件的子目录被认为是一个包，能够被导入。当你导入包时，`__init__.py` 会执行并定位这个包暴露给外界的属性。
+
+让我们创建一个名为 *app* 的包吧，它将承载整个程序。确定你是在 *mrcoblog* 目录下运行下面的命令：
+
+```shell
+(venv) $ mkdir app
+```
+
+app目录下创建`__init__.py` 文件，并输入以下代码：
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+from app import routes
+```
 
 
 
