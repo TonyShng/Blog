@@ -505,8 +505,9 @@ math:
   every_page: false
 
   mathjax:
-    enable: false
+    enable: true
     # Available values: none | ams | all
+    mhchem: true
     tags: none
 
   katex:
@@ -941,6 +942,8 @@ vendors:
   # 文章末尾添加“本文结束”标记
   passage_end_tag:
   enabled: true
+
+
 
 # Assets
 # Accelerate delivery of static files using a CDN
